@@ -1,0 +1,176 @@
+doctype 
+html(lang="en")
+  head
+    link(rel="icon" href="images/fastfood.webp")
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Complete Responsive Food Website
+    // font awesome style link 
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css")
+    // custom css file link
+    link(rel="stylesheet" href="css/style.css")
+    | 
+    |
+  body
+    // header section starts
+    header
+      a(href="#" class="logo")
+        <i class="fas fa-utensils"></i> Food
+      div(id="menu-bar" class="fas fa-bars")
+      nav(class="navbar")
+        a(href="#home") Home
+        a(href="#speciality") Speciality
+        a(href="#popular") Popular
+        a(href="#gallery") Gallery
+        a(href="#review") Review
+        a(href="#order") Order
+
+    // header section ends
+    | 
+    |
+    // home section starts
+    section(class="home" id="home")
+      div(class="content")
+        h3 food made with love
+        p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas accusamus tempore temporibus rem amet laudantium animi optio voluptatum. Natus obcaecati unde porro nostrum ipsam itaque impedit incidunt rem quisquam eos!
+        a(href="#" class="btn") order now
+      div(class="image")
+        img(src="images/home-img.png" alt="")
+    // home section ends
+    | 
+    |
+    // speciality section starts 
+    section(class="speciality" id="speciality")
+      h1.heading Our 
+       span Speciality
+      div.box-container
+        - var Arrayspeciality=['s-1','s-2','s-3','s-4','s-5','s-6']
+            each valspeciality in Arrayspeciality 
+              div(class="box")
+                img(class="image" src="images/"+valspeciality+".jpg")
+                div(class="content")
+                    img(src="images/"+valspeciality+".png")
+                    h3 tasty burger
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore neque amet ipsa tenetur voluptates aperiam tempore libero labore aut   
+    // speciality section ends
+    | 
+    |
+    // popular section starts
+    section(class="popular" id="popular")
+      h1(class="heading") most <span>popular</span> foods
+      div.box-container
+          - var Arraypopular=['p-1','p-2','p-3','p-4','p-5','p-6']
+            each valpopular in Arraypopular 
+              div(class="box")
+                span(class="price") $5 - $20
+                img(src="images/"+valpopular+".jpg" alt="")
+                h3 tasty burger
+                div(class="stars")
+                  i(class="fas fa-star")
+                  i(class="fas fa-star")
+                  i(class="fas fa-star")
+                  i(class="fas fa-star")
+                  i(class="far fa-star")
+                a(href="#" class="btn") order now
+    // popular section ends
+    | 
+    |
+    // steps section starts
+    div(class="step-container")
+      h1(class="heading") how it 
+        span  works 
+      section(class="steps")
+        div(class="box")
+            img(src="images/step-1.jpg" alt="")
+            h3 choose your favorite food
+        div(class="box")
+            img(src="images/step-2.jpg" alt="")
+            h3 free and fast delivery
+        div(class="box")
+            img(src="images/step-3.jpg" alt="")
+            h3 easy payments methods
+        div(class="box")
+            img(src="images/step-4.jpg" alt="")
+            h3 and finally, enjoy your Food
+    // steps section ends
+    | 
+    |
+    // gallery section starts
+    section(class="gallery" id="gallery")
+      h1(class="heading") our food 
+        span gallery
+      div.box-container
+        - var Arraygallery=['g-1','g-2','g-3','g-4','g-5','g-6','g-7','g-8','g-9']
+         each valgallery in Arraygallery 
+                div(class="box")
+                  img(class="image" src="images/"+valgallery+".jpg")
+                  div(class="content")
+                    h3 tasty food
+                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.
+                    a(href="#" class="btn") ordern now
+    // gallery section ends
+    | 
+    |
+    // review section starts
+    section(class="review" id="review")
+      h1(class="heading") our customers 
+        span reviews
+      div.box-container
+        - var Arrayreviews=['pic1','pic2','pic3']
+         each valreviews in Arrayreviews 
+                div(class="box")
+                  img(class="image" src="images/"+valreviews+".png")
+                  h3 john deo
+                  div(class="stars")
+                    i(class="fas fa-star")
+                    i(class="fas fa-star")
+                    i(class="fas fa-star")
+                    i(class="fas fa-star")
+                    i(class="far fa-star")
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti delectus, ducimus facere quod ratione vel laboriosam? Est, maxime rem. Itaque.
+    // review section ends
+    |
+    |
+    // order section starts 
+    section(class="order" id="order")
+      h1(class="heading") <span>order</span> now
+      div(class="row")
+        div(class="image")
+            img(src="images/order-img.jpg" alt="")
+        form(action="")
+            div(class="inputBox")
+                input(type="text" placeholder="name")
+                input(type="email" placeholder="email")
+            div(class="inputBox")
+                input(type="number" placeholder="number")
+                input(type="text" placeholder="food name")
+
+            textarea(placeholder="address" name="" id="" cols="30" rows="10")
+            input(type="submit" value="order now" class="btn")
+    // order section ends 
+    |
+    |
+    // footer section starts
+    section(class="footer")
+      div(class="share")
+        a(href="#" class="btn") facebook
+        a(href="#" class="btn") twitter
+        a(href="#" class="btn") instagram
+        a(href="#" class="btn") pinterest
+        a(href="#" class="btn") linkedin
+      h1(class="credit") created by <span> Amr Ahmed </span> | all rights reserved!
+    // footer section starts
+    |
+    |
+    // scroll top button
+    a(href="#home" class="fas fa-angle-up" id="scroll-top")
+    // loader
+    div(class="loader-container")
+        img(src="images/loader.gif" alt="")
+        
+    // End Html Elmentes 
+    |
+    |
+    // custom js file link 
+    script(src="script/script.js")
